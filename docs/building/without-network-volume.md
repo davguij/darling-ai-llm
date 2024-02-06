@@ -1,6 +1,6 @@
-## Building the Worker with a Network Volume
+## Building the Worker without a Network Volume
 
-This is the simpler option.  No network volume is required.
+This is the simpler option. No network volume is required.
 The entire application will be stored within the Docker image
 but will obviously create a more bulky Docker image as a result.
 
