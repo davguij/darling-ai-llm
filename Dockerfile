@@ -39,6 +39,9 @@ COPY download_model.py fetch_model.py /
 RUN pip3 install huggingface_hub runpod && \
     /fetch_model.py ${MODEL} /workspace/text-generation-webui/models
 
+# Include the custom characters
+COPY characters/Carmen.json /workspace/text-generation-webui/characters/Carmen.json
+
 # Docker container start script
 COPY start_standalone.sh /start.sh
 COPY rp_handler.py /

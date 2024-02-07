@@ -17,9 +17,7 @@ the repo and switch it to an alternate model.~~
 Self-contained; doesn't need a Runpod Network volume, as the model is already included in the Docker image.
 
 ```bash
-depot build --build-platform linux/amd64 -t darling-ai/llm:1 .
-# docker login
-# docker push dockerhub-username/runpod-worker-oobabooga:1.0.0
+depot build --build-platform linux/amd64 -t davguij/darling-ai-llm:1 --push .
 ```
 
 There are two other options:
