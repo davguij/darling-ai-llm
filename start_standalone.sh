@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -z "${MODEL+x}" ]; then
-  MODEL="TheBloke/Synthia-34B-v1.2-GPTQ"
+  MODEL="TheBloke/Wizard-Vicuna-13B-Uncensored-SuperHOT-8K-GPTQ"
 fi
 
 # Replace slashes with underscores
@@ -17,6 +17,8 @@ if [ -d "/workspace/text-generation-webui/models/${MODEL}" ]; then
     --api \
     --loader ExLlama \
     --model ${MODEL} \
+    # --max_seq_len 4096 \
+    # --compress_pos_emb 2 \
     --listen-port 3000 \
     --api-port 5001 \
     --api-blocking-port 5000 \
